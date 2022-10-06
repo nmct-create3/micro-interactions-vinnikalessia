@@ -33,11 +33,12 @@
                         <h5>
                             Floating labels
                         </h5>
-                        <p class="c-form-field">
+                        <p class="c-form-field has-error js-email-field">
                             <label class="c-label" for="username">
                                 Email
+                                <span class="js-email-errormsg"></span>
                             </label>
-                            <input class="c-input" type="email" name="username"
+                            <input class="c-input js-email-input" type="email" name="username"
                                    id="username"
                                    required>
                         </p>
@@ -46,12 +47,13 @@
                         <h5>
                             Toggle password
                         </h5>
-                        <p class="c-form-field">
+                        <p class="c-form-field has-error js-email-field">
                             <label class="c-label" for="password">
                                 Password
+                                <span class="js-email-errormsg"></span>
                             </label>
                             <span class="c-toggle-password-container">
-                                <input class="c-input js-check" type="password" name="password" id="password"
+                                <input class="c-input js-check js-email-input" type="password" name="password" id="password"
                                     required>
                                 <span class="c-toggle-password">
                                     <input class="c-toggle-password__checkbox js-check_svg" type="checkbox"

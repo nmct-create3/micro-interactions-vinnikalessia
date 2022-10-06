@@ -78,6 +78,9 @@
     --global-input-focus-borderColor: var(--global-color-alpha);
     --global-input-focus-boxShadowColor: var(--global-color-alpha-x-transparent);
     --global-input-focus-boxShadow: 0 0 0 3px var(--global-input-focus-boxShadowColor);
+
+    --global-color-error: rgb(255, 0, 0);
+    --global-input-error-borderColor: rgb(255, 0, 0);
 }
 
 /*------------------------------------*\
@@ -621,6 +624,11 @@ input::placeholder {
     align-items: center;
 }
 
+
+.has-error {
+    --label-color: var(--global-color-error);
+    --input-borderColor: var(--global-input-error-borderColor);
+}
 /*
     Component: Input
     ---
@@ -632,7 +640,8 @@ input::placeholder {
     -moz-appearance: none;
     appearance: none;
     width: 100%;
-    border: 1px solid var(--global-input-borderColor);
+    /* border: 1px solid var(--global-input-borderColor); */
+    border: var(--global-borderWidth) solid var(--input-borderColor, var(--global-input-borderColor));
     /* border: 1px solid var(--global-color-neutral-xxx-light); */
     border-radius: var(--global-borderRadius);
     background-color: var(--global-input-backgroundColor);
@@ -677,7 +686,8 @@ more padding on the right to avoid overlap
 */
 
 .c-label {
-    --label-color: var(--global-color-neutral-xx-dark);
+    /* --label-color: var(--global-color-neutral-xx-dark); */
+    color: var(--label-color, var(--global-color-neutral-xx-dark));
     margin-bottom: 0;
     padding-bottom: var(--global-whitespace-sm);
     font-size: 14px;
