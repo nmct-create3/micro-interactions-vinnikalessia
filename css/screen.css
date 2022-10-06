@@ -948,6 +948,103 @@ more padding on the right to avoid overlap
     ---
     Password toggle custom checkbox
 */
+.c-toggle-password-container{
+    display: block;
+    position: relative;
+}
+
+.c-toggle-password{
+    width: var(--global-whitespace);
+    height: var(--global-whitespace);
+    position: absolute;
+    top: calc(var(--global-whitespace) / 2);
+    right: calc(var(--global-whitespace) / 2);
+    fill: var(--global-color-neutral-x-light);
+}
+
+.c-toggle-password__checkbox{
+    position: absolute;
+    appearance: none;
+}
+
+.c-toggle-password__icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--global-whitespace);
+    height: var(--global-whitespace);
+    fill: var(--global-color-neutral-x-light);
+}
+
+.c-toggle-password__icon--hide{
+    display: none;
+}
+
+.c-toggle-password__icon--show{
+    display: block;
+}
+
+.c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--hide{
+    display: block;
+}
+
+.c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--show{
+    display: none;
+}
+
+/* 
+
+.c-toggle-password-container{
+    display: block;
+    position: relative;
+}
+
+
+.c-toggle-password{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+
+} */
+/* 
+.c-toggle-password__icon{
+    position: absolute;
+    display: block;
+    width: var(--global-whitespace);
+    height: var(--global-whitespace);
+    position: absolute;
+    top: calc(var(--global-whitespace) / 2);
+    right: calc(var(--global-whitespace) / 2);
+    pointer-events: none;
+    fill: var(--global-color-neutral-x-light);
+}
+
+.c-toggle-password__checkbox{
+    appearance: none;
+    position: relative;
+} */
+
+/* 
+.c-toggle-password__icon--hide{
+    opacity: 1;
+}
+
+.c-toggle-password__checkbox:checked + .c-toggle-password__label .c-toggle-password__icon--show{
+    display: none;
+}
+
+.c-toggle-password__checkbox:checked + .c-toggle-password__label .c-toggle-password__icon--hide{
+    display: block;
+}
+
+.c-toggle-password__icon--show{
+    display: block;    
+}
+
+.c-toggle-password__icon--hide{
+    display: none;
+} */
 
 
 /*------------------------------------*\
