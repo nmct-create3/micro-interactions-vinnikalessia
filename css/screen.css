@@ -624,7 +624,6 @@ input::placeholder {
     align-items: center;
 }
 
-
 .has-error {
     --label-color: var(--global-color-error);
     --input-borderColor: var(--global-input-error-borderColor);
@@ -936,8 +935,6 @@ more padding on the right to avoid overlap
     ---
     Custom select dropdown
 */
-
-
 .c-custom-select {
     display: block;
     position: relative;
@@ -1002,8 +999,39 @@ more padding on the right to avoid overlap
     display: none;
 }
 
-/* 
+.c-check_like-container{
+    display: block;
+    position: relative;
+}
 
+.c-check_like{
+    width: var(--global-whitespace);
+    height: var(--global-whitespace);
+    position: absolute;
+    /*top: calc(var(--global-whitespace) / 2);
+    right: calc(var(--global-whitespace) / 2);*/
+    fill: var(--global-color-neutral-x-light);
+}
+
+.c-like__checkbox{
+    position: absolute;
+    display: block;
+    /* appearance: none; */
+}
+
+.c-like__icon{
+    position: absolute;
+    width: var(--global-whitespace);
+    height: var(--global-whitespace);
+    fill: hotpink;
+}
+
+.c-like__checkbox:checked+.c-like__label .c-like__icon{
+    display: none;
+    fill: #2E77E6;
+}
+
+/* 
 .c-toggle-password-container{
     display: block;
     position: relative;
