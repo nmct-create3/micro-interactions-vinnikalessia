@@ -1026,9 +1026,27 @@ more padding on the right to avoid overlap
     fill: var(--global-color-neutral-x-light);
 }
 
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+@keyframes backpulse {
+    from { transform: scale(1.2); }
+    to { transform: scale(1); }
+}
+
 .c-like__checkbox:checked+.c-like__label .c-like__icon{
-    /* animation: ; */
+    animation: pulse 1s infinite ease-in-out alternate;
     fill: hotpink;
+    transform: scale(1.2);
+    animation: pulse 1s ease-in-out alternate;
+}
+
+.c-like__checkbox+.c-like__label .c-like__icon{
+    animation: backpulse 1s ease-in-out alternate;
+    fill: var(--global-color-neutral-x-light);
+    transform: scale(1);
 }
 
 /* 
