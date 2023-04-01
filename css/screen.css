@@ -873,6 +873,7 @@ more padding on the right to avoid overlap
     justify-content: space-between;
 }
 
+/*background*/
 .c-custom-toggle__fake-input {
     display: block;
     height: 24px;
@@ -889,6 +890,7 @@ more padding on the right to avoid overlap
     margin-right: 0;
 }
 
+/*de slider*/
 .c-custom-toggle__fake-input::after {
     position: relative;
     display: block;
